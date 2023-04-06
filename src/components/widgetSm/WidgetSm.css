@@ -1,0 +1,63 @@
+.widgetSm{
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+.widgetSmTitle {
+    margin-bottom: 20px;
+}
+
+.widgetSmList{
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.widgetSmItem{
+    margin-bottom: 20px;
+}
+
+.widgetSmFeatures{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.widgetSmImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.widgetSmUser{
+    display: flex;
+    flex-direction: column;
+}
+
+.widgetSmUserName{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.widgetSmUserJob{
+    font-weight: 300;
+    color: #555;
+}
+
+.widgetSmIconBtn{
+    border: none;
+    border-radius: 8px;
+    background-color: #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.widgetSmIcon{
+    color: #555;
+}

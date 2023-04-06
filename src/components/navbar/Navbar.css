@@ -32,10 +32,12 @@
     justify-content: space-evenly;
     align-items: center;
     color: #555; 
+    cursor: pointer;
 }
 
 .notif, .lang {
     position: relative !important;
+    
 }
 
 .nav-icon-badge1, .nav-icon-badge2{
@@ -51,14 +53,15 @@
     position: absolute;
     top: 20px;
     z-index: 999;
+    cursor: pointer;
 }
 
 .nav-icon-badge1{
-    right: 153px;
+    right: 130px;
 }
 
 .nav-icon-badge2{
-    right: 110px;
+    right: 173px;
 }
 
 .avatar{
@@ -66,4 +69,5 @@
     width: 50px;
     border-radius: 25%;
     margin-right: 20px;
+    cursor: pointer;
 }

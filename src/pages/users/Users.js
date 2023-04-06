@@ -1,16 +1,16 @@
 import React, { useState } from "react";
+import { userRows } from "../../datas";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import '../users/Users.css'
-import { products } from '../../datas'
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
+import "./Users.css";
 
-export default function Products() {
-  const [rows, setProductRows] = useState(products);
+export default function Users() {
+  const [rows, setUserRows] = useState(userRows);
 
-    const productDelete = productId =>{
-      setProductRows(rows.filter(row=>{
-      return row.id !== productId
+    const userDelete = userId =>{
+    setUserRows(rows.filter(row=>{
+      return row.id !== userId
     })) 
   }
 
@@ -21,25 +21,35 @@ export default function Products() {
       width: 90,
     },
     {
-      field: "product",
-      headerName: "Product",
+      field: "user",
+      headerName: "User",
       width: 250,
       renderCell: (params) => {
         return (
           <Link className="link" to="/">
             <div className="userListUser">
               <img src={params.row.avatar} className="userListImg" />
-              <p>{params.row.title}</p>
+              <p>{params.row.username}</p>
             </div>
           </Link>
         )
       }
     },
     {
-      field: 'price',
-      headerName: 'Price',
+      field: 'email',
+      headerName: 'Email',
+      width: 200
+    },
+    {
+      field: 'status',
+      headerName: 'Status',
       width: 120
     },
+    {
+      field: 'transactions',
+      headerName: 'Transactions',
+      width: 160
+    }, 
     {
       field: 'action',
       headerName: 'Actions',
@@ -47,14 +57,14 @@ export default function Products() {
       renderCell: (params)=>{
         return(
           <>
-          <Link to={`/products/${params.row.id}`}>
+          <Link to={`/users/${params.row.id}`}>
             <button className="userListEditIcon">
               Edit
             </button>
           </Link>
-          <DeleteForeverIcon 
+          <PersonRemoveIcon 
           className="userListDeleteIcon"
-          onClick={()=> productDelete(params.row.id)} 
+          onClick={()=> userDelete(params.row.id)} 
           />
           </>
         )
